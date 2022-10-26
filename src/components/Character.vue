@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { computed, ComputedRef } from "vue";
-import { sliceUrl } from "../utils/sliceUrl";
+import { getCharacterID } from "../utils/getCharacterID";
 
 import type { CharacterData } from "../types";
 
 const props = defineProps<{character: CharacterData}>();
-const characterId: ComputedRef<string> = computed(() => sliceUrl(props.character.url, "/people/"));
-console.log(characterId.value);
+const characterId: ComputedRef<string> = computed(() => getCharacterID(props.character.url));
 </script>
 
 <template>

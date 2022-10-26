@@ -7,7 +7,9 @@ export interface CharacterData {
 	url: string
 }
 
-export interface Characters {
+export type Characters = CharacterData[]
+
+export interface CharactersResponse {
 	next: string;
 	previous: string;
 	results: CharacterData[]
