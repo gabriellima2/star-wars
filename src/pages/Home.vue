@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
+import Characters from "../components/Characters.vue";
 </script>
 
 <template>
-  <RouterView />
+  <Characters />
 </template>
 
 <style scoped></style>

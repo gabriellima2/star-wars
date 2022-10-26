@@ -1,4 +1,4 @@
-export interface Character {
+export interface CharacterData {
 	name: string;
 	height: string;
 	mass: string;
@@ -10,5 +10,5 @@ export interface Character {
 export interface Characters {
 	next: string;
 	previous: string;
-	results: Character[]
+	results: CharacterData[]
 }

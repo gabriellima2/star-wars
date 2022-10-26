@@ -1,12 +1,19 @@
 <script setup lang="ts">
-import { Character } from "../types";
+import { computed, ComputedRef } from "vue";
+import { sliceUrl } from "../utils/sliceUrl";
 
-const props = defineProps<{character: Character}>();
+import type { CharacterData } from "../types";
+
+const props = defineProps<{character: CharacterData}>();
+const characterId: ComputedRef<string> = computed(() => sliceUrl(props.character.url, "/people/"));
+console.log(characterId.value);
 </script>
 
 <template>
 	<li>
-		{{props.character.name}}
+		<RouterLink :to="{name: 'Details', params: { id: characterId }}">
+			{{props.character.name}}
+		</RouterLink>
 	</li>
 </template>
 
