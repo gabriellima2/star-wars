@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Characters from "./components/Characters.vue";
+</script>
 
 <template>
-  <h1>Hello World</h1>
-</template> 
+  <Characters />
+</template>
 
 <style scoped></style>
