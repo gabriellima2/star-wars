@@ -7,15 +7,12 @@
 </template>
 
 <style scoped lang="scss">
+@import "../assets/scss/_main.scss";
 .loading {
 	width: 100%;
 	height: 100%;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	overflow: hidden;
+	@include flex-center("row");
 }
 
 .loading__circle {

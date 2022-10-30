@@ -7,20 +7,17 @@
 </template>
 
 <style scoped lang="scss">
+@import "../assets/scss/_main.scss";
 .container {
 	width: 100%;
 	height: 100%;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	overflow: hidden;
+	@include flex-center("row");
 }
 
 .container__error-message {
 	font-size: 1.2rem;
 	font-weight: 500;
-	color: #f1f1f1;
+	color: $font-color;
 }
 </style>
