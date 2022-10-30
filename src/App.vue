@@ -26,6 +26,10 @@ a {
 	color: $font-color;
 }
 
+li {
+	list-style: none;
+}
+
 @keyframes scaling {
 	0%, 100% {
 		transform: scale(0.4);
@@ -33,12 +37,5 @@ a {
 	50% {
 		transform: scale(0.8);
 	}
-}
-
-.fullscreen {
-	width: 100vw;
-	height: 100vh;
-
-	overflow: hidden;
 }
 </style>

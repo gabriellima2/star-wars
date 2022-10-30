@@ -1,0 +1,11 @@
+@mixin flex-center($direction) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: $direction;
+}
+
+@mixin fullscreen {
+	width: 100vw;
+	height: 100vh;
+}

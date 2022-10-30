@@ -9,22 +9,33 @@ const {data, error, loading} = useCharacters();
 </script>
 
 <template>
-	<main>
-
-		<span v-if="loading" class="fullscreen">
+		<main v-if="loading">
 			<Loading />
-		</span>
+		</main>
 
-		<span v-if="error || !data" class="fullscreen">
+		<main v-else-if="error || !data">
 			<Error>
 				Ocorreu um problema para pegar os dados. Por favor, verifique sua conexão e recarregue a página.
 			</Error>
-		</span>
+		</main>
 
-		<section v-else>
+		<main v-else class="content">
 			<Characters :characters="data.results" />
-		</section>
-	</main>
+		</main>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "../assets/scss/_main.scss";
+main {
+	@include fullscreen;
+
+	overflow: hidden;
+}
+
+.content {
+	@include flex-center("column");
+
+	height: auto;
+	overflow: auto;
+}
+</style>
