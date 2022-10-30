@@ -27,4 +27,4 @@ const {data, error, loading} = useCharacters();
 	</main>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped></style>

@@ -7,12 +7,23 @@ import { RouterView } from "vue-router";
 </template>
 
 <style lang="scss">
-$font: "#f1f1f1";
-$background: "#111111";
+@import "./assets/scss/_main.scss";
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	color: $font-color;
+	font-family: $font-main;
+	background-color: $main-color;
+}
 
 a {
 	text-decoration: none;
-	color: $font;
+	color: $font-color;
 }
 
 @keyframes scaling {
