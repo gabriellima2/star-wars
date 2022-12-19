@@ -2,40 +2,40 @@
 import { useRoute } from "vue-router";
 import { useSpecificCharacter } from "../composables/useSpecificCharacter";
 
+import Fullscreen from "../components/Fullscreen.vue";
+import Loading from "../components/Loading.vue";
+import Error from "../components/Error.vue";
+
 const { params } = useRoute();
 const { data, error, loading } = useSpecificCharacter(params.id as string);
 </script>
 
 <template>
-	<main v-if="loading">
-		<Loading />
-	</main>
+	<Fullscreen class="content">
+		<Loading v-if="loading" />
 
-	<main v-else-if="error || !data">
-		<Error>
+		<Error v-else-if="error || !data">
 			Ocorreu um problema para pegar os dados. Por favor, verifique sua conexão e recarregue a página.
 		</Error>
-	</main>
 
-	<main v-else class="content">
-		<div class="character">
+		<div v-else class="character">
 			<h1>{{ data.name }}</h1>
 			<p>
 				{{data.height}}CM {{data.mass}}Kg
 			</p>
 		</div>
-	</main>
+
+	</Fullscreen>
 </template>
 
 <style lang="scss" scoped>
 @import "../assets/scss/_main.scss";
 .content {
-	@include flex-center("row");
-
-	height: 100vh;
+	@include flex-center("row")
 }
-
 .character {
+	width: fit-content;
+
 	padding: 16px 32px;
 	border-radius: 8px;
 
