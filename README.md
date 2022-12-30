@@ -1,13 +1,6 @@
-# Projeto em desenvolvimento
-
-<h1 align="center">Star Wars</h1>
-
-<h3 align="center">Informações sobre os personagens de Star Wars</h3>
-
-<h2>Por que?</h2>
+<h1>Star Wars</h1>
 
 Projeto feito para trabalhar com código assíncrono no VueJS. Utilizando a API [SWAPI](https://swapi.dev/) que fornece dados de Star Wars.
-
 
 # Tecnologias
 
